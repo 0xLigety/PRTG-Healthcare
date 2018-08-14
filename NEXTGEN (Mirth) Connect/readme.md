@@ -35,6 +35,7 @@ prtg_mirth.ps1 <IP/DNS> <port> <username> <password> "channel" <channelID>
 
 # Auto-Discovery support via Template
   - Select "NEXTGEN (Mirth) Connect" template in Device Settings as template
+  - Set Username and Password in the Device Linux credentials
   - Run Auto-Discovery with specified template
   - Newly added channels from Mirth will be added in PRTG if you schedule a reoccuring Auto-Discovery for this Device
 
