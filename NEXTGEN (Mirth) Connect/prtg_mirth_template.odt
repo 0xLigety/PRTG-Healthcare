@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="UTF-8"?>
+  <devicetemplate id="customexexml" name="NEXTGEN (Mirth) Connect" priority="1">
+    <check id="ping" meta="ping"/>
+     <create id="mirthchannel" kind="exexml" meta="customexexmlscan" requires="ping">
+      <metadata>
+        <exefile>
+          prtg_mirth.ps1
+        </exefile>
+        <exeparams>
+          %host 8443 %linuxuser %linuxpassword "meta"
+        </exeparams>
+      </metadata>
+      <createdata/>
+    </create>
+	<create id="mirthsystem" kind="exexml" displayname="Mirth System Health" requires="ping">
+      <createdata>
+        <exefile>
+          prtg_mirth.ps1
+        </exefile>
+        <exeparams>
+          %host 8443 %linuxuser %linuxpassword "system"
+        </exeparams>
+      </createdata>
+    </create>
+  </devicetemplate>  
